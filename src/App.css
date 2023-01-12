@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root{
+  --primary-ff : 'Poppins', sans-serif;
+}
+
+body{
+  font-family: var(--primary-ff);
+}
 .App {
   text-align: center;
 }
@@ -32,7 +41,60 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.sidebar {
+  width: 280px;
+  height: 100vh;
+}
+
+.content-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.35rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.badge-danger {
+  color: #fff;
+  background-color: #e74a3b;
+}
+
+.badge-counter {
+  position: absolute;
+  transform: scale(.7);
+  transform-origin: top right;
+  right: 0.25rem;
+  margin-top: -0.25rem;
+}
+.Area-chart{
+  width:15rem;
+  height:15rem;
+}
+.Donut-chart{
+  width:25rem;
+  height:25rem;
+}
+.table{
+  width:25rem;
+  height:25rem;
+}
+.box{
+  width:10rem;
+  height:5rem;
 }
