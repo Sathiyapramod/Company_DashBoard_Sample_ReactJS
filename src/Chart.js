@@ -1,7 +1,6 @@
-import { useState } from 'react';
+
 
 export function Chart() {
-    const [show,setShow] = useState(0);
     return (
         <div className="p-2 text-start m-2">
             <div>
@@ -15,8 +14,7 @@ export function Chart() {
             <div className="Donut-chart d-flex bg-light align-items-center justify-content-center rounded-2 ">
                 DONUT CHART
             </div>
-            </div>
-            
+            </div>      
         </div>
     );
 }

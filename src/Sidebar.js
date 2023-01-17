@@ -2,10 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
+    const styling = {
+        textDecoration: "none",
+        color: "white",
+    };
     return (
         <div>
-            <ul class="sidebar navbar-nav bg-gradient-primary sidebar sidebar-dark accordion bg-primary text-white" id="accordionSidebar">
-                <Link class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html" />
+            <ul class="sidebar navbar-nav bg-gradient-primary sidebar sidebar-dark accordion bg-dark text-white" id="accordionSidebar">
+                <Link class="sidebar-brand d-flex align-items-center justify-content-center" style={styling} />
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -20,21 +24,19 @@ const Sidebar = () => {
                     Interface
                 </div>
                 <li class="nav-item fs-4">
-                    <Link class="nav-link collapsed" to="/components" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                        
-                        
+                    <Link class="nav-link collapsed" to="/components" style={styling}>
                         <span>Components</span>
                     </Link>
-                    
+
                 </li>
                 <li class="nav-item fs-4">
-                    <Link class="nav-link collapsed" to="/utilities" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    <Link class="nav-link collapsed" to="/utilities" style={styling}>
                         <span>Utilities</span>
                     </Link>
                     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Custom Utilities:</h6>
-                            
+
                         </div>
                     </div>
                 </li>
@@ -43,21 +45,17 @@ const Sidebar = () => {
                     Addons
                 </div>
                 <li class="nav-item">
-                    <Link class="nav-link collapsed" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages" >
-                        <i class="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                    <Link class="nav-link collapsed">
+                        <span className='fs-4'>Pages</span>
                     </Link>
-                   
                 </li>
                 <li class="nav-item">
-                    <Link to="/chart" class="text-light p-3"><span>Chart</span></Link>
+                    <Link to="/chart" class="text-light p-3" style={styling}><span className='fs-4'>Chart</span></Link>
                 </li>
-
                 <li class="nav-item">
-                    <Link to="/table" className='text-light p-3 m-3'><span>Tables</span></Link>
+                    <Link to="/table" className='text-light p-3 m-3' style={styling}><span className='fs-4'>Tables</span></Link>
                 </li>
                 <hr class="sidebar-divider d-none d-md-block" />
-                
             </ul>
         </div>
     )
