@@ -55,7 +55,7 @@ const Sidebar = () => {
                 <li class="nav-item">
                     <Link to="/table" className='text-light p-3 m-3' style={styling}><span className='fs-4'>Tables</span></Link>
                 </li>
-                <hr class="sidebar-divider d-none d-md-block" />
+                <hr class="sidebar-divider d-none " />
             </ul>
         </div>
     )
