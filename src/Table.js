@@ -7,8 +7,8 @@ export function Table(){
                 <div className="bg-success text-white box rounded-2 p-4 border-2">success</div>
                 <div className="bg-danger text-white box rounded-2 p-4 border-2">Danger</div>
                 <div className="bg-warning text-white box rounded-2 p-4 border-2">warning</div>
-                <div className="bg-info text-white box rounded-2 p-4 border-2">Info</div>
-                <div className="bg-light text-dark box rounded-2 p-4 border-2">Light</div>
+                <div className="bg-info text-white box rounded-2 p-4 border-2 border-dark">Info</div>
+                <div className="bg-light text-dark box rounded-2 p-4 border-2 border-dark">Light</div>
                 <div className="bg-dark text-white box rounded-2 p-4 border-2">Dark</div>
             </div>
         </div>

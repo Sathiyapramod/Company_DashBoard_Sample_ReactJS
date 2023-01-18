@@ -1,15 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-    let url="https://cdn.pixabay.com/photo/2020/07/14/13/07/icon-5404125_1280.png"
+    let url="https://cdn.pixabay.com/photo/2020/07/14/13/07/icon-5404125_1280.png" ; 
     return (
         <div className='bg-light p-3 shadow'>
             <navbar className='navbar nav d-flex justify-content-between'>
                 <div className='d-flex flex-row gap-1'>
                     <input type="search" className='form-control' placeholder='Search'></input>
-                    <button className='btn btn-primary opacity-75'>search</button>
+                    <Link to ="/search"><button className='btn btn-primary opacity-75'>search</button></Link>
                 </div>
-               
                 <div className='d-flex flex-row gap-2 align-items-center'>
                     <div>
                         <button className='btn btn-outline-primary'>
@@ -29,7 +29,8 @@ const Navbar = () => {
                 </div>
             </navbar>
         </div>
-    )
+    );
+   
 }
 
 export default Navbar
