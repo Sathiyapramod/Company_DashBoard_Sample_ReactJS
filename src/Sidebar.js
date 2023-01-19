@@ -60,10 +60,7 @@ const Sidebar = () => {
                         <Link class="nav-link" to="/components" style={styling}>{flag ? (
                             <div className='d-flex flex-row gap-2 align-items-center '>
                                 <span><SettingsSuggestOutlinedIcon /></span>
-                                <span>
-
-
-
+                                <span> Components 
                                 </span>
                             </div>
                         ) : (<div className='d-flex flex-wrap justify-content-center gap-2 fs-6 me-3 mb-2 mt-2 opacity-75'>
