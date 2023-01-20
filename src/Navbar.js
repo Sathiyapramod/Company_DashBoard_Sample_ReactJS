@@ -3,16 +3,22 @@ import { Link } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import Badge from '@mui/material/Badge';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import TextField from '@mui/material/TextField';
+import Profile from './Profile';
+import Messages from './Messages';
+import Button from '@mui/material/Button';
 
 const Navbar = () => {
-    let url = "https://cdn.pixabay.com/photo/2020/07/14/13/07/icon-5404125_1280.png";
+    const styling = {
+        textDecoration: "none",
+        color: "white",
+    };
     return (
-        <div className='bg-light p-3 shadow'>
+        <div className='bg-light shadow'>
             <navbar className='navbar nav d-flex justify-content-between'>
-                <div className='d-flex flex-row gap-2'>
-                    <input type="search" className='form-control fs-5' placeholder='Search'></input>
-                    <Link to="/search"><button className='btn btn-primary opacity-75 fs-5'>search</button></Link>
+                <div className='d-flex flex-row gap-2 ms-2 align-items-center'>
+                    <TextField id="outlined-basic" label="Search" variant="outlined" />
+                    <Link to="/search" style={styling}><Button variant="outlined" className='fs-5' size="large">Search</Button></Link>
                 </div>
                 <div className='d-flex flex-row gap-3 align-items-center'>
                     <div>
@@ -22,18 +28,9 @@ const Navbar = () => {
                             </Badge>
                         </IconButton>
                     </div>
-                    <div>
-                        <IconButton aria-label="mail" size="large">
-                            <Badge color="error" badgeContent={4} max={3}>
-                                <MailOutlineIcon fontSize='large' />
-                            </Badge>
-                        </IconButton>
-                    </div>
                     <div className='d-flex flex-row gap-2 align-items-center bg-light'>
-                        <IconButton size="large" className='rounded-0'>
-                            <div className='fs-5'>Douglas McGee</div>
-                            <div className='img-thumbnail'><img src={url} width={"60px"} height={"60px"} alt={"pic"} /></div>
-                        </IconButton>
+                        <Messages />
+                        <Profile />
                     </div>
                 </div>
             </navbar>

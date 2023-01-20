@@ -20,12 +20,12 @@ const Sidebar = () => {
     const [flag, setFlag] = useState(false);
     const sidebar = {
         width: (flag) ? "280px" : "120px",
-        height: "100vh"
+        height: "100vh",
     }
     return (
         <div className=''>
             <div className='d-flex flex-column'>
-                <ul class=" navbar-nav bg-gradient-primary sidebar sidebar-primary accordion bg-primary text-white" id="accordionSidebar" style={sidebar}>
+                <ul class="sidebar-media navbar-nav bg-gradient-primary sidebar sidebar-primary accordion bg-primary text-white" id="accordionSidebar" style={sidebar}>
                     <Link class="sidebar-brand d-flex align-items-center justify-content-center" style={styling} />
                     <div class="sidebar-brand-text mx-3 fs-4 p-3">
                         {flag ? (<span className='fs-3'>😋</span>) : (<span className='fs-1'>😋</span>)}
