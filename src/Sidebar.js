@@ -145,7 +145,7 @@ const Sidebar = () => {
                                 )}
                         </Link>
                     </li>
-                    <li class="nav-item text-start flag">
+                    <li class="nav-item text-start flag mt-3">
                         <Link to="/table" className='text-light' style={styling}>
                             {flag ?
                                 (
