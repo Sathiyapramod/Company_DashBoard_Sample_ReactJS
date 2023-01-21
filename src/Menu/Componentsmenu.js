@@ -9,7 +9,7 @@ export default function Componentsmenu() {
     return (
         <div>
             <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header" className='gap-2 bg-primary text-white d-flex flex-row align-items-center'>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header" className='gap-2 bg-primary text-white d-flex flag flex-row align-items-center'>
                     <span className='me-2'><SettingsOutlinedIcon fontSize="small"/></span>
                     <span>Components</span>
                 </AccordionSummary>

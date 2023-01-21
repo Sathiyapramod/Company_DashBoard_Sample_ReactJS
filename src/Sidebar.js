@@ -27,7 +27,7 @@ const Sidebar = () => {
     return (
         <div className=''>
             <div className='d-flex flex-column'>
-                <ul class="sidebar-media navbar-nav bg-gradient-primary sidebar sidebar-primary accordion bg-primary text-white" id="accordionSidebar" style={sidebar}>
+                <ul class="sidebar-media navbar-nav bg-gradient-primary sidebar sidebar-primary flag bg-primary text-white" id="accordionSidebar" style={sidebar}>
                     <Link class="sidebar-brand d-flex align-items-center justify-content-center" style={styling} />
                     <div class="sidebar-brand-text mx-3 fs-4 p-3">
                         {flag ? (
@@ -51,7 +51,7 @@ const Sidebar = () => {
                         </Fab>
                     </div>
                     <hr class="sidebar-divider my-0" />
-                    <li class="fs-4 ms-2 align-items-center text-start ps-3">
+                    <li class="fs-4 ms-2 align-items-center text-start ps-3 flag">
                         <Link class="nav-link" to="/">
                             {flag ?
                                 (
@@ -145,7 +145,7 @@ const Sidebar = () => {
                                 )}
                         </Link>
                     </li>
-                    <li class="nav-item text-start">
+                    <li class="nav-item text-start flag">
                         <Link to="/table" className='text-light' style={styling}>
                             {flag ?
                                 (
@@ -163,10 +163,6 @@ const Sidebar = () => {
                         </Link>
                     </li>
                     <hr class="sidebar-divider d-none " />
-                    <li>
-
-
-                    </li>
                 </ul>
             </div>
 
