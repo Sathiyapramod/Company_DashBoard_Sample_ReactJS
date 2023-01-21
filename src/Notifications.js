@@ -8,8 +8,8 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import Badge from '@mui/material/Badge';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 
 export default function Messages() {
@@ -60,11 +60,11 @@ export default function Messages() {
                     aria-haspopup="true"
                     onClick={handleToggle}
                 >
-                    <IconButton aria-label="mail" size="large">
-                        <Badge color="error" badgeContent={4} max={3}>
-                            <MailOutlineIcon fontSize='large' />
-                        </Badge>
-                    </IconButton>
+                    <IconButton aria-label="delete" size="large">
+                            <Badge color="error" badgeContent={4} max={3}>
+                                <NotificationsActiveIcon fontSize='large' />
+                            </Badge>
+                        </IconButton>
                 </Button>
                 <Popper
                     open={open}
@@ -83,7 +83,7 @@ export default function Messages() {
                             }}
                         >
                             <Paper sx={{ width: 250 }} className="rounded-top">
-                                <header className='bg-primary container rounded-top text-white pt-2 pb-2 fw-bold' style={{ width: "250px" }}>MESSAGE CENTER </header>
+                                <header className='bg-primary container rounded-top text-white pt-2 pb-2 fw-bold' style={{ width: "250px" }}>NOTIFICATION CENTER </header>
                                 <ClickAwayListener onClickAway={handleClose}>
                                     <MenuList
                                         autoFocusItem={open}
@@ -91,12 +91,12 @@ export default function Messages() {
                                         aria-labelledby="composition-button"
                                         onKeyDown={handleListKeyDown}
                                     ><MenuItem onClick={handleClose}>
-                                            No Messages
+                                            No Notifications
                                         </MenuItem>
                                         <hr />
                                         <MenuItem onClick={handleClose}>
                                             <div className='bg-light opacity-50'>
-                                                Read More Messages
+                                                Notify in future
                                             </div>
                                         </MenuItem>
                                     </MenuList>

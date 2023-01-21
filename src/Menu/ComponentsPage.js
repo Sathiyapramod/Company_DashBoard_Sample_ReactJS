@@ -7,12 +7,9 @@ import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import Stack from '@mui/material/Stack';
-import IconButton from '@mui/material/IconButton';
-import Badge from '@mui/material/Badge';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import SettingsSuggestOutlinedIcon from '@mui/icons-material/SettingsSuggestOutlined'
 
-
-export default function Messages() {
+export default function ComponentsPage() {
 
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
@@ -50,27 +47,17 @@ export default function Messages() {
 
     return (
         <Stack direction="row" spacing={2}>
-
             <div>
-                <Button
-                    ref={anchorRef}
-                    id="composition-button"
-                    aria-controls={open ? 'composition-menu' : undefined}
-                    aria-expanded={open ? 'true' : undefined}
-                    aria-haspopup="true"
-                    onClick={handleToggle}
-                >
-                    <IconButton aria-label="mail" size="large">
-                        <Badge color="error" badgeContent={4} max={3}>
-                            <MailOutlineIcon fontSize='large' />
-                        </Badge>
-                    </IconButton>
+                <Button ref={anchorRef} id="composition-button" aria-controls={open ? 'composition-menu' : undefined} aria-expanded={open ? 'true' : undefined} aria-haspopup="true" onClick={handleToggle}
+                    className="text-white d-flex flex-wrap justify-content-center gap-2" size="medium">             
+                    <span><SettingsSuggestOutlinedIcon /></span>
+                    <span>Components </span>
                 </Button>
                 <Popper
                     open={open}
                     anchorEl={anchorRef.current}
                     role={undefined}
-                    placement="bottom-start"
+                    placement="right-end"
                     transition
                     disablePortal
                 >
@@ -82,22 +69,23 @@ export default function Messages() {
                                     placement === 'bottom-start' ? 'left top' : 'left bottom',
                             }}
                         >
-                            <Paper sx={{ width: 250 }} className="rounded-top">
-                                <header className='bg-primary container rounded-top text-white pt-2 pb-2 fw-bold' style={{ width: "250px" }}>MESSAGE CENTER </header>
+                            <Paper sx={{ width: 250 }} className="m-3 rounded-top opacity-100">
+                                <header className='bg-primary container rounded-top text-white pt-2 pb-2 fw-bold' style={{ width: "250px",fontSize : 16 }}>NOTIFICATION CENTER </header>
                                 <ClickAwayListener onClickAway={handleClose}>
                                     <MenuList
                                         autoFocusItem={open}
                                         id="composition-menu"
                                         aria-labelledby="composition-button"
                                         onKeyDown={handleListKeyDown}
-                                    ><MenuItem onClick={handleClose}>
-                                            No Messages
+                                    ><MenuItem onClick={handleClose} className="fw-normal">
+                                            CUSTOM Components
+                                            <hr />
                                         </MenuItem>
-                                        <hr />
-                                        <MenuItem onClick={handleClose}>
-                                            <div className='bg-light opacity-50'>
-                                                Read More Messages
-                                            </div>
+                                        <MenuItem onClick={handleClose} className="fw-bold ms-4">
+                                            BUTTONS
+                                        </MenuItem>
+                                        <MenuItem onClick={handleClose} className="fw-bold ms-4">
+                                            CARDS
                                         </MenuItem>
                                     </MenuList>
                                 </ClickAwayListener>
