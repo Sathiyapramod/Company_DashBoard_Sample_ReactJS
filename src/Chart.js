@@ -1,20 +1,31 @@
-
+import BarChartDesign from "./Menu/BarChartDesign";
+import ChartData from "./Menu/LineChart";
+import PieChartDesign from "./Menu/PieChart";
 
 export default function Chart() {
-    return (
-        <div className="p-2 text-start m-2">
-            <div>
-                <h1>Charts</h1>
-                <p>Chart.js is a third party plugin that is used to generate the charts in this theme. The charts below have been customized - for further customization options, please visit the official Chart.js documentation.</p>
-            </div>
-            <div className="d-flex flex-wrap justify-content-center align-items-center">
-            <div className="Area-chart d-flex bg-danger align-items-center justify-content-center rounded-2">
-                AREA-CHART
-            </div>
-            <div className="Donut-chart d-flex bg-light align-items-center justify-content-center rounded-2 ">
-                DONUT CHART
-            </div>
-            </div>      
-        </div>
-    );
+  return (
+    <div className="p-2 text-start m-2">
+      <div>
+        <h1>Charts</h1>
+        <p>
+          All the Charts prepared using React Recharts Library. Please visit{" "}
+          <a
+            href="https://recharts.org/en-US/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            official website{" "}
+          </a>{" "}
+          for documentation
+        </p>
+      </div>
+      <div className="d-flex flex-wrap justify-content-center align-items-center gap-5 m-5">
+        <ChartData />
+      </div>
+      <div className="d-flex flex-row justify-content-center align-items-center gap-3">
+        <PieChartDesign />
+        <BarChartDesign />
+      </div>
+    </div>
+  );
 }
