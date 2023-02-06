@@ -95,4 +95,7 @@
 .flag:hover{
   color: lightgray;
 }
-
+.banner{
+  width: 20rem;
+  height: 8rem;
+}

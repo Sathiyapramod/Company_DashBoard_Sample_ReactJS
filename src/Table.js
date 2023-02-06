@@ -1,6 +1,6 @@
 import {ListofStudents} from './ListofStudents'
 
-export function Table(){
+export default function Table(){
     return (
         <div className="d-flex justify-content-center">
             <ListofStudents />

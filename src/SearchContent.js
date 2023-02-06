@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 
 
-export function SearchContent(){
+export default function SearchContent(){
     const {index} = useParams();
     return (
         <div>

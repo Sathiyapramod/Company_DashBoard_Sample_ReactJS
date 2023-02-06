@@ -1,6 +1,6 @@
 
 
-export function Chart() {
+export default function Chart() {
     return (
         <div className="p-2 text-start m-2">
             <div>

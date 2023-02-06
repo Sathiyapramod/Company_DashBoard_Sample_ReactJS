@@ -3,7 +3,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Button from '@mui/material/Button';
 
 
-export function PageNotFound() {
+export default function PageNotFound() {
     const flag = useNavigate();
     let url = "https://cdn.dribbble.com/users/718859/screenshots/3267029/jisunpark_404-error.gif";
     return (

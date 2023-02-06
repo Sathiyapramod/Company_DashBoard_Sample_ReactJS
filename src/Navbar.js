@@ -8,7 +8,7 @@ import Notifications from './Notifications';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Navbar = () => {
+const NavbarStyled = () => {
     const styling = {
         textDecoration: "none",
         color: "white",
@@ -17,7 +17,7 @@ const Navbar = () => {
     const navigate = useNavigate();
     return (
         <div className='bg-light shadow'>
-            <navbar className='navbar nav d-flex justify-content-between'>
+            <div className='navbar nav d-flex justify-content-between'>
                 <div className='d-flex flex-row gap-2 ms-2 align-items-center'>
                     <TextField id="outlined-basic" label="Search" variant="outlined" onChange={(event)=>setFlag(event.target.value)}/>
                     <Link to={"/search/" + flag} style={styling}><Button variant="outlined" className='fs-5' size="large" onClick={()=>navigate("/search/" + flag)}>Search</Button></Link>
@@ -29,10 +29,10 @@ const Navbar = () => {
                         <Profile />
                     </div>
                 </div>
-            </navbar>
+            </div>
         </div>
     );
 
 }
 
-export default Navbar
+export default NavbarStyled
