@@ -1,4 +1,8 @@
 import React from "react";
+
+import IconButton from "@mui/material/IconButton";
+import CardHeader from "@mui/material/CardHeader";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 import {
   LineChart,
   Line,
@@ -6,6 +10,7 @@ import {
   XAxis,
   YAxis,
   Tooltip,
+  Legend,
 } from "recharts";
 import { Paper } from "@mui/material";
 
@@ -21,18 +26,28 @@ function ChartData() {
   ];
   return (
     <div className="shadow">
-      <Paper sx={{ padding: 2 }}>
+      <Paper>
+        <CardHeader
+          title="Earnings Overview"
+          action={
+            <IconButton aria-label="settings">
+              <MoreVertIcon />
+            </IconButton>
+          }
+          className="bg-light shadow"
+        ></CardHeader><br />
         <LineChart
-          width={840}
-          height={300}
+          width={750}
+          height={400}
           data={data}
           margin={{ top: 5, right: 30, bottom: 5, left: 0 }}
         >
-          <Line type="monotone" dataKey="frequency" stroke="#8884d8" />
-          <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+          <Line type="monotone" dataKey="frequency" stroke="#8884d8" strokeWidth={3} />
+          <CartesianGrid stroke="#ccc" strokeWidth={2} strokeDasharray="6 6" />
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip viewBox={{ x: 0, y: 0, width: 200, height: 200 }} />
+          <Legend />
         </LineChart>
       </Paper>
     </div>

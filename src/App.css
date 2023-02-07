@@ -39,15 +39,16 @@
 }
 
 .sidebar {
-  width: 280px;
-  height: auto;
+  min-height: 100%;
 }
-
 .content-wrapper {
-  width: 100%;
+  max-width:100vw;
   height: 100%;
+  margin-left:-11px;
 }
-
+.content{
+  width:100%;
+}
 .badge {
   display: inline-block;
   padding: 0.25em 0.4em;
@@ -66,6 +67,7 @@
   background-color: #e74a3b;
 }
 
+
 .badge-counter {
   position: absolute;
   transform: scale(.7);
@@ -73,29 +75,18 @@
   right: 0.25rem;
   margin-top: -0.25rem;
 }
-.Area-chart{
-  width:15rem;
-  height:15rem;
+
+.table {
+  width: 25rem;
+  height: 25rem;
 }
-.Donut-chart{
-  width:25rem;
-  height:25rem;
+
+.box {
+  width: 10rem;
+  height: 5rem;
 }
-.table{
-  width:25rem;
-  height:25rem;
-}
-.box{
-  width:10rem;
-  height:5rem;
-}
-.flag{
-  color: white;
-}
-.flag:hover{
-  color: lightgray;
-}
-.banner{
+
+.banner {
   width: 20rem;
   height: 8rem;
 }

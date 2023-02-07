@@ -7,7 +7,9 @@ import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import Stack from '@mui/material/Stack';
+import { Link } from 'react-router-dom';
 import SettingsSuggestOutlinedIcon from '@mui/icons-material/SettingsSuggestOutlined'
+import { LinkStyling } from './Data/General';
 
 export default function ComponentsPage() {
 
@@ -82,7 +84,7 @@ export default function ComponentsPage() {
                                             <hr />
                                         </MenuItem>
                                         <MenuItem onClick={handleClose} className="fw-bold ms-4">
-                                            BUTTONS
+                                           <Link to="/buttons" style={LinkStyling}>BUTTONS</Link>
                                         </MenuItem>
                                         <MenuItem onClick={handleClose} className="fw-bold ms-4">
                                             CARDS

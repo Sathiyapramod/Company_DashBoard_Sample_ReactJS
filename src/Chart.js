@@ -1,11 +1,12 @@
 import BarChartDesign from "./Menu/BarChartDesign";
+import { Paper, Typography } from "@mui/material";
 import ChartData from "./Menu/LineChart";
 import PieChartDesign from "./Menu/PieChart";
 
 export default function Chart() {
   return (
     <div className="p-2 text-start m-2">
-      <div>
+      <Typography variant="h6">
         <h1>Charts</h1>
         <p>
           All the Charts prepared using React Recharts Library. Please visit{" "}
@@ -18,12 +19,17 @@ export default function Chart() {
           </a>{" "}
           for documentation
         </p>
-      </div>
-      <div className="d-flex flex-wrap justify-content-center align-items-center gap-5 m-5">
-        <ChartData />
-      </div>
-      <div className="d-flex flex-row justify-content-center align-items-center gap-3">
+      </Typography>
+      <div className="d-flex flex-row flex-wrap justify-content-center align-items-center gap-5 m-5">
+        <Paper sx={{ width: "60%", height: "100%" }}>
+          <ChartData />
+        </Paper>
         <PieChartDesign />
+      </div>
+      <div
+        className="d-flex flex-row justify-content-center align-items-center"
+        width="50%"
+      >
         <BarChartDesign />
       </div>
     </div>

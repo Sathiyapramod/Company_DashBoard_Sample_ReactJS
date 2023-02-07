@@ -1,4 +1,7 @@
 import React from "react";
+import IconButton from "@mui/material/IconButton";
+import CardHeader from "@mui/material/CardHeader";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 import {
   BarChart,
   Bar,
@@ -22,8 +25,18 @@ const data = [
 function BarChartDesign() {
   return (
     <Paper sx={{ padding: 2 }}>
-      <BarChart width={600} height={300} data={data}>
-        <CartesianGrid strokeDasharray="3 3" />
+      <CardHeader
+        title="Cost Vs Sales"
+        action={
+          <IconButton aria-label="settings">
+            <MoreVertIcon />
+          </IconButton>
+        }
+        className="bg-light shadow"
+      ></CardHeader>
+      <br />
+      <BarChart width={800} height={400} data={data}>
+        <CartesianGrid strokeDasharray="3 3" strokeWidth={2} />
         <XAxis dataKey="month" />
         <YAxis />
         <Legend />
